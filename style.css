@@ -230,7 +230,7 @@ a.btn:nth-child(2)::before{
 }
 
 .social-icons{
-    margin-top: 8rem;
+    margin-top: 6rem;
     display: flex;
     justify-content: space-around;
     width: 200px;
@@ -280,6 +280,8 @@ a.btn:nth-child(2)::before{
 
 .home-image{
     position: absolute;
+    margin-left: -200px;
+    margin-bottom: 200px;
 }
 
 .image-box{
@@ -289,5 +291,31 @@ a.btn:nth-child(2)::before{
 .image-box img{
     width: 100%;
     max-width: 350px;
-    height: auto;
+    height: auto; 
+}
+
+.liquid-shape{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    top: 10%;
+    margin-left: 700px;
+    margin-bottom: 400px;
+    filter: blur(50);
+}
+
+.liquid-shape :nth-child(1){
+    filter: blur(30px);
+}
+
+.liquid-shape2{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    top: 10%;
+    margin-left: 700px;
+    margin-bottom: 400px;
+   
 }
