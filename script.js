@@ -88,5 +88,11 @@ let menuIcon = document.querySelector("#menu-icon");
 let navalist = document.querySelector(".navlist");
 
 menuIcon.onclick=()=>{
-    menuIcon.classList.toggle("")
+    menuIcon.classList.toggle("bx-x");
+    navalist.classList.toggle("open");
+}
+
+window.onscroll=()=>{
+    menuIcon.classList.remove("bx-x");
+    navalist.classList.remove("open");
 }
