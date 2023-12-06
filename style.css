@@ -295,7 +295,7 @@ section{
 .social-icons a::before{
     content: "";
     position: absolute;
-    top: o;
+    top: 0;
     left: 0;
     width: 0;
     height: 100%;
@@ -1019,3 +1019,4 @@ footer a i{
         font-size: .6rem;
     }
 }
+
