@@ -364,13 +364,7 @@
             <span>Ask Me Question</span>
             <h2>Contact Me</h2>
         </div>
-<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-  <!-- Required hidden inputs -->
-  <input type="hidden" name="form-name" value="contact">
-  <p style="display:none;">
-    <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
-  </p>
-
+<form id="contact-form">
   <input type="text" name="name" placeholder="Your Name" required>
   <input type="email" name="email" placeholder="Your Email" required>
   <input type="text" name="address" placeholder="Your Address">
@@ -382,6 +376,29 @@
   </div>
 </form>
 
+<!-- Load EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  // ✅ Initialize with your PUBLIC KEY (not service ID)
+  (function() {
+    emailjs.init("jUPZLxArHiJaZMvuy"); 
+  })();
+
+  // ✅ Handle form submit
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_q4fty26", "template_uelfpo8", this)
+      .then(() => {
+        alert("Message sent successfully!");
+        this.reset(); // clear form
+      }, (error) => {
+        alert("Failed to send message. Please try again.");
+        console.error(error);
+      });
+  });
+</script>
+
 
     </section>
 
@@ -390,7 +407,6 @@
         <p>Coppyright &copy; 2023 by LenixTech || All Right Reserved </p>
         <a href="#home"><i class='bx bx-up-arrow-alt'></i> </a>
     </footer>
-    <script src="mixitup.min.js"></script>
-    <script src="script.js"></script>  
+
 </body>
 </html>
