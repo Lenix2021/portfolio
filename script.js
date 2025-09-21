@@ -96,3 +96,13 @@ window.onscroll=()=>{
     menuIcon.classList.remove("bx-x");
     navalist.classList.remove("open");
 }
+
+document.getElementById("downloadCV").addEventListener("click", function(e) {
+    e.preventDefault(); // prevent the default link behavior
+
+    // Create a hidden link
+    const link = document.createElement("a");
+    link.href = "files/MyCV";   // path to your CV
+    link.download = "MyCV.pdf"; // name for the downloaded file
+    link.click();
+});
