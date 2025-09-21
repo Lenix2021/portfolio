@@ -364,17 +364,21 @@
             <span>Ask Me Question</span>
             <h2>Contact Me</h2>
         </div>
-        <form name="contact" method="POST" data-netlify="true">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="text" name="address" placeholder="Your Address">
-                <input type="tel" name="phone" placeholder="Phone Number">
-                <textarea name="message" rows="10" placeholder="Your Message" required></textarea>
+      <form name="contact" method="POST" data-netlify="true">
+  <!-- ✅ Hidden input required for Netlify -->
+  <input type="hidden" name="form-name" value="contact">
 
-                <div class="btn-box formBtn">
-                    <button type="submit" class="btn">Send Message</button>
-                </div>
-       </form>
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <input type="text" name="address" placeholder="Your Address">
+  <input type="tel" name="phone" placeholder="Phone Number">
+  <textarea name="message" placeholder="Your Message" required></textarea>
+
+  <div class="btn-box formBtn">
+    <button type="submit" class="btn">Send Message</button>
+  </div>
+</form>
+
     </section>
 
     <!-- footer section ----------------------------------------------------------->
