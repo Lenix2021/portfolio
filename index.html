@@ -364,9 +364,12 @@
             <span>Ask Me Question</span>
             <h2>Contact Me</h2>
         </div>
-<form name="contact" method="POST" data-netlify="true">
-  <!-- ✅ REQUIRED hidden field -->
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+  <!-- Required hidden inputs -->
   <input type="hidden" name="form-name" value="contact">
+  <p style="display:none;">
+    <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+  </p>
 
   <input type="text" name="name" placeholder="Your Name" required>
   <input type="email" name="email" placeholder="Your Email" required>
@@ -378,6 +381,7 @@
     <button type="submit" class="btn">Send Message</button>
   </div>
 </form>
+
 
     </section>
 
